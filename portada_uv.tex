@@ -1,0 +1,56 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt,a4paper]{book}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage[inner=25mm,outer=25mm,top=30mm,bottom=20mm,headheight=13.6pt]{geometry}
+\usepackage{graphicx} 
+\graphicspath{ {./imagenes/}}
+\usepackage{xcolor}
+\usepackage{tikz} 
+\definecolor{barra}{RGB}{19,91,169}
+
+\begin{document}
+	
+	\thispagestyle{empty}
+	\begin{tikzpicture}[remember picture, overlay, shift=(current page.south)]
+	\fill[barra] (current page.north west) rectangle (-6.0,0) ;
+	\end{tikzpicture}
+	\begin{tikzpicture}[remember picture, overlay, shift=(current page.north west)]
+	\node[inner sep=0pt] (thèse) at (18,-2.5)
+	{\includegraphics[width=0.25\textwidth]{logo1}};
+	
+	\node[align=center] at (12.5,-6) {
+		\\ \large 
+		\textbf{U\ N\ I\ V\ E\ R\ S\ I\ D\ A\ D\ \ \ V\ E\ R\ A\ C\ R\ U\ Z\ A\ N\ A} \\ \\
+		\textbf{FACULTAD DE FÍSICA}
+	};   
+	
+	\node[align=center,font=\Large] at (12.5,-11) {\, \hspace{12cm}
+		\\ \rule{13cm}{0.4 mm} \\ \\
+		{\bfseries Supongamos que el título es inesperadamente} \\ {\bfseries largo lo cual no tiene nada de} \\ {\bfseries raro y está bien uwu} \\ \\
+		\rule{13cm}{0.4 mm} \\
+	}; 
+	
+	\node[align=center] at (12.5,-16.5) {
+		\\ \large 
+		\textbf{TESIS }
+		\\ \\ \large 
+		\textbf{TRABAJO DE EXPERIENCIA RECEPCIONAL }
+		\\ \\ \large 
+		Que para obtener el título de 
+		\\ \\ \large 
+		\textbf{LICENCIATURA EN FÍSICA}
+	};
+	
+	\node[align=center] at (12.5,-22) {
+		P R E S E N T A: \\ \\
+		\textbf{Nombre completo del alumno}\\ \\ \\
+		DIRECTOR DE TESIS:\\ \\
+		\textbf{(GRADO ACADÉMICO, NOMBRE COMPLETO)}};
+	
+	\node[text width=12cm] at (12.5,-26) { %%%% JURY %%%%
+		Xalapa                         \hfill Fecha(Mes y año)\\};
+	\end{tikzpicture}
+	
+	
+\end{document}
