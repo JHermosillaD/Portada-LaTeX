@@ -1,0 +1,43 @@
+\documentclass[]{article}
+\usepackage{tikz}
+\usepackage{pgfgantt}
+\usepackage[spanish]{babel}
+\usepackage[spanish]{translator}
+
+\title{Cronograma}
+\author{Jesús Eduardo Hermosilla Díaz}
+\date{}
+\begin{document}
+
+\maketitle
+
+\begin{tikzpicture}
+\begin{ganttchart}[
+vgrid,hgrid,
+title label font=\bfseries\footnotesize,
+include title in canvas=false,
+bar/.append style={draw=none, fill=black!60},
+bar incomplete/.append style={fill=black!30},
+bar progress label font=\color{white},
+bar label font=\footnotesize,
+]{1}{20}
+\gantttitle[title label node/.append style={left= 7pt}]{Mes:}{0}
+\gantttitle{Febrero}{4}
+\gantttitle{Marzo}{4}
+\gantttitle{Abril}{4}
+\gantttitle{Mayo}{4}
+\gantttitle{Junio}{4} \\
+\gantttitle[title label node/.append style={left= 7pt}]{Semana:}{0}
+\gantttitlelist{1,...,20}{1} \\
+\ganttbar[progress=10, ]{Análisis de antecedentes}{1}{2} \\
+\ganttbar[progress=20, ]{Implementación de paquetes ROS}{3}{5} \\
+\ganttbar[progress=30, ]{Diseño del modelo de interacción}{6}{9} \\
+\ganttbar[progress=40, ]{Simulación de escenarios realistas}{10}{12} \\
+\ganttbar[progress=50, ]{Evaluación de la estrategia}{13}{14} \\
+\ganttbar[progress=60, ]{Comparación del desempeño}{15}{16} \\
+\ganttbar[progress=70, ]{Redacción del documento final}{17}{19} \\
+\ganttbar[progress=80, ]{Presentación del trabajo recepcional}{20}{20}
+\end{ganttchart}
+\end{tikzpicture}
+
+\end{document}
